@@ -1,0 +1,15 @@
+.navigator {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigator-ul {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  color: var(--second-color);
+}
+
+.navigator li {
+  color: var(--second-color);
+}

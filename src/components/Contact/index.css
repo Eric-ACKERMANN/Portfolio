@@ -1,0 +1,7 @@
+.contact h2 {
+  text-align: left;
+}
+
+.contact h2::after {
+  margin: 25px 0;
+}

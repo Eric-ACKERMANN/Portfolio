@@ -1,0 +1,7 @@
+.Home section:nth-child(1) {
+  background-color: var(--main-bg-color);
+}
+
+.Home section:nth-child(n + 2) {
+  background-color: var(--second-bg-color);
+}

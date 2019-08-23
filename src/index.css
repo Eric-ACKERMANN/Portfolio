@@ -1,3 +1,8 @@
+html {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +10,169 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 21px;
+  /* --main-bg-color: #00a82d; */ /* VERT EVERNOTE */
+  /* --main-bg-color: #042f4b; */
+  --main-bg-color: #2962ff;
+  /* --main-bg-color: #263238; */
+  --second-bg-color: #ffffff;
+  --third-bg-color: #8b4367;
+  --main-color: #black;
+  --second-color: #ffffff;
+  --third-color: #393e46;
+  --projects-border: #cccccc;
+  --button-main-color: #1565c0;
+  --button-second-color: #2676d1;
+  background-color: var(--main-bg-color);
+  color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  padding: 10px 0px;
+  margin: auto;
+  width: 100%;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0px 10px 0px;
+  font-weight: 500;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  background-color: var(--main-bg-color);
+  margin: 25px auto;
+}
+
+.badge {
+  background-color: var(--button-main-color);
+  color: var(--second-color);
+  border-radius: 15px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  vertical-align: middle;
+  padding: 3px 7px;
+  margin-left: 2rem;
+}
+
+/* To put an element in display flex */
+.bg-color-black {
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-dev {
+  background-color: grey;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-primary {
+  background-color: var(--button-main-color);
+  color: var(--second-color);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.button-primary:hover {
+  background-color: var(--button-second-color);
+  transition: all 0.3s;
+}
+
+.button-secondary {
+  border: var(--button-main-color) solid 1px;
+  color: var(--button-main-color);
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.button-secondary:hover {
+  background-color: var(--button-main-color);
+  color: var(--second-color);
+  transition: all 0.3s;
+}
+
+@media (min-width: 0px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }

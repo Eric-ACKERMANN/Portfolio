@@ -1,0 +1,7 @@
+.projects-article {
+  border-bottom: solid 1px var(--projects-border);
+}
+
+.projects div:last-child {
+  border-bottom: none;
+}

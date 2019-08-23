@@ -1,0 +1,7 @@
+.skills h2 {
+  text-align: left;
+}
+
+.skills h2::after {
+  margin: 25px 0;
+}

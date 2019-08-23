@@ -1,0 +1,7 @@
+.hobby h2 {
+  text-align: left;
+}
+
+.hobby h2::after {
+  margin: 25px 0;
+}
