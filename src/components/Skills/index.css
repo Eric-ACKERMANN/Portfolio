@@ -1,7 +1,98 @@
-.skills h2 {
-  text-align: left;
+.skills > div {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.skills h2::after {
-  margin: 25px 0;
+.skill {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.skill:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.skill i {
+  margin-bottom: 15px;
+}
+
+.skills .skill:nth-child(1) {
+  background-color: #e34c26;
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(1):hover {
+  color: #e34c26;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(2) {
+  background-color: #264de4;
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(2):hover {
+  color: #264de4;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(3) {
+  background-color: #f0db4f;
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(3):hover {
+  color: #f0db4f;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(4) {
+  background-color: #44883d;
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(4):hover {
+  color: #44883d;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(5) {
+  background-color: #61dbfb;
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(5):hover {
+  color: #61dbfb;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(6) {
+  background-color: #4267b2;
+  transition: all 0.3s;
+}
+
+.skills .skill:nth-child(6):hover {
+  color: #4267b2;
+  background-color: var(--second-color);
+  transition: all 0.3s;
+}
+
+.skill:hover {
+  cursor: pointer;
 }

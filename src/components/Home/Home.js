@@ -9,6 +9,24 @@ import Skills from "../Skills";
 import Projects from "../Projects";
 
 export default class Home extends React.Component {
+  state = {
+    formName: "",
+    formEmail: "",
+    formMessage: ""
+  };
+  handleSubmit = () => {
+    console.log(this.state.formValue);
+  };
+
+  handleChangeName = e => {
+    this.setState({ formName: e });
+  };
+  handleChangeEmail = e => {
+    this.setState({ formEmail: e });
+  };
+  handleChangeMessage = e => {
+    this.setState({ formMessage: e });
+  };
   render() {
     return (
       <div className="Home">
@@ -25,7 +43,15 @@ export default class Home extends React.Component {
           <Skills />
         </section>
         <section>
-          <Contact />
+          <Contact
+            name={this.state.formName}
+            email={this.state.formEmail}
+            message={this.state.formMessage}
+            handleSubmit={this.handleSubmit}
+            setName={this.handleChangeName}
+            setEmail={this.handleChangeEmail}
+            setMessage={this.handleChangeMessage}
+          />
         </section>
         <section>
           <Hobby />
