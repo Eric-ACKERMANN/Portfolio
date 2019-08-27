@@ -4,58 +4,51 @@ import "./index.css";
 import Introduction from "../Introduction";
 import AboutMe from "../AboutMe";
 import Contact from "../Contact";
-import Hobby from "../Hobby";
+
 import Skills from "../Skills";
 import Projects from "../Projects";
 
 export default class Home extends React.Component {
   state = {
-    formName: "",
-    formEmail: "",
-    formMessage: ""
+    form: { name: "", email: "", message: "" },
+    navSmall: false
   };
-  handleSubmit = () => {
+  handleSubmit = event => {
+    event.preventDefault();
     console.log(this.state.formValue);
   };
 
-  handleChangeName = e => {
-    this.setState({ formName: e });
+  handleChangeForm = (e, key) => {
+    let form = { ...this.state.form };
+    form[key] = e;
+    this.setState({ form: form });
   };
-  handleChangeEmail = e => {
-    this.setState({ formEmail: e });
-  };
-  handleChangeMessage = e => {
-    this.setState({ formMessage: e });
-  };
+
   render() {
     return (
-      <div className="Home">
-        <section>
+      <div className="home">
+        <section id="introduction">
           <Introduction />
         </section>
-        <section>
+        <section id="aboutMe">
           <AboutMe />
         </section>
-        <section>
+        <section id="projects">
           <Projects />
         </section>
-        <section>
+        <section id="skills">
           <Skills />
         </section>
-        <section>
+        <section id="contact">
           <Contact
-            name={this.state.formName}
-            email={this.state.formEmail}
-            message={this.state.formMessage}
+            formValue={this.state.form}
             handleSubmit={this.handleSubmit}
-            setName={this.handleChangeName}
-            setEmail={this.handleChangeEmail}
-            setMessage={this.handleChangeMessage}
+            setForm={this.handleChangeForm}
           />
         </section>
-        <section>
+        {/* <section>
           <Hobby />
-        </section>
+        </section> */}
       </div>
     );
   }

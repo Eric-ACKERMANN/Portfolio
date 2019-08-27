@@ -1,42 +1,75 @@
 import React from "react";
 import "./index.css";
 
-export default function({
-  handleSubmit,
-  setName,
-  setEmail,
-  setMessage,
-  emailValue,
-  nameValue,
-  messageValue
-}) {
+export default function({ handleSubmit, setForm, formValue }) {
   return (
     <div className="container contact">
       <h2>Contact</h2>
-      <form onSubmit={() => handleSubmit()}>
-        <input
-          placeholder="Your Name"
-          type="text"
-          name="name"
-          value={nameValue}
-          onChange={setName}
-        />
-        <input
-          placeholder="Your mail"
-          type="Email"
-          name="email"
-          value={emailValue}
-          onChange={setEmail}
-        />
-        <textarea
-          placeholder="Tapez votre message ici..."
-          type="text"
-          name="message"
-          value={messageValue}
-          onChange={setMessage}
-        />
-        <input type="submit" value="Submit" />
-      </form>
+      <div className="form">
+        <div>
+          <div>
+            <input
+              placeholder=""
+              type="text"
+              name="name"
+              value={formValue.name}
+              onChange={event => setForm(event.target.value, "name")}
+            />
+            <label>NAME</label>
+          </div>
+          <div>
+            <input
+              placeholder=""
+              type="Email"
+              name="email"
+              value={formValue.email}
+              onChange={event => setForm(event.target.value, "email")}
+            />
+            <label>EMAIL</label>
+          </div>
+        </div>
+        <div>
+          <textarea
+            placeholder=""
+            type="text"
+            name="message"
+            value={formValue.message}
+            onChange={event => setForm(event.target.value, "message")}
+          />
+          <label>MESSAGE</label>
+        </div>
+        <button className="button-primary">Send</button>
+      </div>
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/eric-ackermann-b01914128/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Linkedin
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Eric-ACKERMANN?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Email
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/Eric-ACKERMANN?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </li>
+      </ul>
+      <span>Eric ACKERMANN - 2019</span>
     </div>
   );
 }

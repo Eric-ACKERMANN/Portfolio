@@ -1,5 +1,5 @@
 html {
-  font-size: 10px;
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -22,15 +22,36 @@ body {
   --third-color: #393e46;
   --projects-border: #cccccc;
   --button-main-color: #1565c0;
-  --button-second-color: #2676d1;
+  --button-second-color: #3292ff;
   background-color: var(--main-bg-color);
   color: var(--main-color);
+
+  /* TEXT COLOR */
+  --main-color: #black;
+  --second-color: #ffffff;
+  --second-color-hover: yellow;
+  --third-color: #393e46;
+  /* FONT SIZE */
+  --fs-nav-desk: 1rem;
+
+  /* FONT WEIGHT */
+  --fw-nav-desk: 600;
+
+  /* FONT FAMILY */
   font-family: "Open Sans", sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 .container {
@@ -50,12 +71,6 @@ li {
   color: var(--main-color);
   font-weight: 500;
   font-size: 1.6rem;
-}
-
-footer {
-  text-align: center;
-  padding: 30px 0px 10px 0px;
-  font-weight: 500;
 }
 
 figure {
@@ -94,23 +109,6 @@ h2::after {
   margin-left: 2rem;
 }
 
-/* To put an element in display flex */
-.bg-color-black {
-  background-color: rgb(0, 0, 0);
-}
-
-.bg-dev {
-  background-color: grey;
-}
-
-.bg-red {
-  background-color: red;
-}
-
-.bg-green {
-  background-color: green;
-}
-
 button:hover {
   cursor: pointer;
 }
@@ -120,28 +118,37 @@ button:focus {
 }
 
 .button-primary {
+  border: none;
   background-color: var(--button-main-color);
   color: var(--second-color);
   font-weight: 600;
-  transition: all 0.3s;
+  transition: box-shadow 0.3s;
+  font-size: 1.4rem;
+  padding: 15px 30px;
+  border-radius: 30px;
 }
 
-.button-primary:hover {
-  background-color: var(--button-second-color);
-  transition: all 0.3s;
+.button-secondary:active,
+.button-primary:active {
+  box-shadow: 0 0 0 3px var(--button-second-color);
+  transition: box-shadow 0.3s;
 }
 
 .button-secondary {
   border: var(--button-main-color) solid 1px;
   color: var(--button-main-color);
-  transition: all 0.3s;
+  transition: box-shadow color 0.3s;
   font-weight: 600;
+  font-size: 1.4rem;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background-color: transparent;
 }
 
 .button-secondary:hover {
   background-color: var(--button-main-color);
   color: var(--second-color);
-  transition: all 0.3s;
+  transition: box-shadow color 0.3s;
 }
 
 @media (min-width: 0px) {
@@ -174,5 +181,90 @@ button:focus {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%;
+  }
+  .col-2 {
+    width: 16.66%;
+  }
+  .col-3 {
+    width: 25%;
+  }
+  .col-4 {
+    width: 33.33%;
+  }
+  .col-5 {
+    width: 41.66%;
+  }
+  .col-6 {
+    width: 50%;
+  }
+  .col-7 {
+    width: 58.33%;
+  }
+  .col-8 {
+    width: 66.66%;
+  }
+  .col-9 {
+    width: 75%;
+  }
+  .col-10 {
+    width: 83.33%;
+  }
+  .col-11 {
+    width: 91.66%;
+  }
+  .col-12 {
+    width: 100%;
   }
 }

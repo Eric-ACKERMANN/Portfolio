@@ -2,18 +2,26 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import Navigator from "./components/Navigator";
-import Footer from "./components/Footer";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      navSmall: false
+    };
   }
+
+  handleClickNavSmall = e => {
+    this.setState({ navSmall: !this.state.navSmall });
+  };
   render() {
     return (
       <Router>
-        <Navigator />
+        <Navigator
+          navSmall={this.state.navSmall}
+          setNavSmall={this.handleClickNavSmall}
+        />
         <Switch>
           <Route
             exact={true}
@@ -23,7 +31,6 @@ export default class App extends React.Component {
             }}
           />
         </Switch>
-        <Footer />
       </Router>
     );
   }

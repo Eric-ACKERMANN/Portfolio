@@ -9,32 +9,32 @@ export default class Skills extends React.Component {
         <h2>Skills</h2>
         <div>
           <Skill
-            logo={<i class="fab fa-html5 fa-4x" />}
+            logo={<i className="fab fa-html5 fa-4x" />}
             text="HTML"
             className="skill"
           />
           <Skill
-            logo={<i class="fab fa-css3-alt fa-4x" />}
+            logo={<i className="fab fa-css3-alt fa-4x" />}
             text="CSS"
             className="skill"
           />
           <Skill
-            logo={<i class="fab fa-js-square fa-4x" />}
+            logo={<i className="fab fa-js-square fa-4x" />}
             text="JavaScript"
             className="skill"
           />
           <Skill
-            logo={<i class="fab fa-node-js fa-4x" />}
+            logo={<i className="fab fa-node-js fa-4x" />}
             text="NodeJs"
             className="skill"
           />
           <Skill
-            logo={<i class="fab fa-react fa-4x" />}
+            logo={<i className="fab fa-react fa-4x" />}
             text="ReactJs"
             className="skill"
           />
           <Skill
-            logo={<i class="fab fa-react fa-4x" />}
+            logo={<i className="fab fa-react fa-4x" />}
             text="React Nativ"
             className="skill"
           />

@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import browser from "../../svg/browser-white(2).svg";
+import browser from "../../svg/browser.svg";
 
 export default class AboutMe extends React.Component {
   render() {
