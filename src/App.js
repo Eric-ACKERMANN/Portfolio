@@ -12,6 +12,8 @@ export default class App extends React.Component {
     };
   }
 
+  // test de changement pour github
+
   handleClickNavSmall = e => {
     this.setState({ navSmall: !this.state.navSmall });
   };
